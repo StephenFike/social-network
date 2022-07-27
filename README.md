@@ -24,7 +24,7 @@ To run the app run ```npm start``` and use Insomnia to test the routes.
 ## Screenshot & Video demonstration
 
 ![Screenshot](/assets/images/appscreenshot.png)
-[Click here]() for a video demonstration!
+[Click here](https://drive.google.com/file/d/1TfBA8tieyzBEq-cAzoNd-2qLAJRtEpXe/view) for a video demonstration!
 
 ## Made with
 JavaScript
