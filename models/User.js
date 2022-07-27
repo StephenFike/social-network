@@ -14,13 +14,13 @@ const UserSchema = new Schema({
         // match a valid email using a regex
         match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/]
     },
-    friends: [{
-        type: Schema.Types.ObjectId,
-        ref: 'User'
-    }],
     thoughts:[{
         type: Schema.Types.ObjectId,
         ref: 'Thought'
+    }],
+    friends: [{
+        type: Schema.Types.ObjectId,
+        ref: 'User'
     }]
 },
     {
@@ -31,7 +31,7 @@ const UserSchema = new Schema({
     }
 );
 
-UserSchema.virtual('friendsCount').get(function(){
+UserSchema.virtual('friendCount').get(function(){
     return this.friends.length;
 });
 
