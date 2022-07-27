@@ -8,6 +8,7 @@ const userController = {
                 path: 'thoughts',
                 select: '-__v'
             })
+            .select('-__v')
             .then(dbUserData => res.json(dbUserData))
             .catch(err => {
                 console.log(err);
@@ -51,7 +52,7 @@ const userController = {
             .catch(err => res.status(400).json(err));
     },
     deleteUser({ params }, res) {
-        User.findOneandDelete({ _id: params.id })
+        User.findOneAndDelete({ _id: params.id })
             .then(dbUserData => {
                 if (!dbUserData) {
                     res.status(404).json({ message: 'No user found with this id!' });
@@ -64,7 +65,7 @@ const userController = {
     createFriend({ params }, res) {
         User.findOneAndUpdate(
             { _id: params.id },
-            { $push: { friends: params.friend.id } },
+            { $push: { friends: params.friendId } },
             { new: true }
         )
             .populate({
