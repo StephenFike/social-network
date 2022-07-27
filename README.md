@@ -19,7 +19,12 @@ An API that allows you to create users, create thoughts, add friends, and react 
 To install, clone the repository then run ```npm install```.
 
 ## Usage
-To run the app run ```npm start``` and use Insomnia to test the routes..
+To run the app run ```npm start``` and use Insomnia to test the routes.
+
+## Screenshot & Video demonstration
+
+![Screenshot](/assets/images/appscreenshot.png)
+[Click here]() for a video demonstration!
 
 ## Made with
 JavaScript
